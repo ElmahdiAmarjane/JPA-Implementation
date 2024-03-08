@@ -51,4 +51,20 @@ public class AdminController {
     public List<User> getAllUsers(){
         return userServices.getAllUsers();
     }
+    
+    @Path("/searchUser")
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public List<User> searchUserByEmail(User user){
+        return userServices.searchUserByEmail(user);
+    }
+
+    @Path("/acceptUser")
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public boolean accepteUser(User user){
+        return userServices.accepteUser(user);
+    }
 }

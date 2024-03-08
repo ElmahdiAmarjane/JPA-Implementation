@@ -16,19 +16,23 @@ public class ImplNoteServices implements INoteServices,Serializable {
        private NoteDao noteDao;
     @Override
     public boolean create(Note note) {
-       return  noteDao.create(note);
+         noteDao.create(note);
+         return true;
     }
    @Override
    public boolean delete(Long id) {
-      return noteDao.delete(id);
+    //  return noteDao.delete(id);
+    return false;
    }
    @Override
    public boolean update(Note note) {
-      return noteDao.updateNote(note);
+      //return noteDao.updateNote(note);
+      return false;
    }
    @Override
    public List<Note> getAll(int iduser) {
-        return noteDao.getAll(iduser);
+        //return noteDao.getAll(iduser);
+        return null;
    }
 
     

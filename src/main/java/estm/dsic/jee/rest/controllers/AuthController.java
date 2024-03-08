@@ -20,6 +20,7 @@ public class AuthController {
     @POST 
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
+
      public User login(User user){
          return userServices.auth( user); 
      }

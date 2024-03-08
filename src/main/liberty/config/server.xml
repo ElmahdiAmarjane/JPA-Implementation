@@ -51,4 +51,11 @@
 
     <!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
     <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
+    <webApplication location="guide-cors.war" contextRoot="/"/>
+
+<cors domain="/configurations/simple"
+    allowedOrigins="http://openliberty.io"
+    allowedMethods="POST"
+    allowCredentials="true"
+    exposeHeaders="MyHeader"/>
 </server>

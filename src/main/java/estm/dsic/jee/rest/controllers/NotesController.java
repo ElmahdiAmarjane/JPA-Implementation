@@ -31,7 +31,8 @@ public class NotesController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public boolean delete(Note note){
-          return noteServices.delete(note.getId());
+          //return noteServices.delete(note.getId());
+          return false;
     }
     @Path("/updateNote")
     @POST

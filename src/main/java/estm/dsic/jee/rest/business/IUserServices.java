@@ -12,4 +12,6 @@ public interface IUserServices {
     boolean deleteUser(User user);
     boolean updateUser(User user, String email);
     List<User> getAllUsers();
+    List<User>searchUserByEmail(User user);
+    boolean accepteUser(User user);
 }

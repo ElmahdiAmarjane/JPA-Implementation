@@ -18,31 +18,49 @@ public class ImplUserServices implements IUserServices, Serializable {
 
     @Override
     public User auth(User user) {
-        return userDao.auth(user);
+       // return userDao.auth(user);
+       return userDao.getUserByEmail(user.getEmail());
     }
 
     @Override
     public boolean create(User user) {
-        return userDao.create(user);
+         userDao.create(user);
+         return true;
     }
 
     @Override
     public boolean validateUser(boolean validate,User user) {
-        return userDao.validateUser(validate,user.getEmail());
+       // return userDao.validateUser(validate,user.getEmail());
+       return false;
     }
 
     @Override
     public boolean deleteUser(User user) {
-          return userDao.delete(user.getEmail());
+        //  return userDao.delete(user.getId());
+        return false;
     }
 
     @Override
     public boolean updateUser(User user, String email) {
-           return userDao.update(user, email);
+          // return userDao.update(user, email);
+          return false;
     }
 
     @Override
     public List<User> getAllUsers() {
-        return userDao.getAll();
+        //return userDao.getAll();
+        return null;
+    }
+
+    @Override
+    public List<User> searchUserByEmail(User user) {
+        // return userDao.searchUserByEmail(user.getEmail());
+        return null;
+    }
+
+    @Override
+    public boolean accepteUser(User user) {
+        // return userDao.accepteUser(user.getId());
+       return false;
     }
 }
